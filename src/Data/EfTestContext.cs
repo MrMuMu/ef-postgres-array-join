@@ -53,9 +53,11 @@ namespace Ef.Test.Data
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
+                entity.Property(e => e.Name).HasColumnName("name");
+
                 entity.HasData(
-                    new() { Id = 1 },
-                    new() { Id = 2 }
+                    new() { Id = 1, Name = "Name1" },
+                    new() { Id = 2, Name = "Name2" }
                 );
             });
 

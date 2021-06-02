@@ -3,15 +3,17 @@ using System;
 using Ef.Test.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Ef.Test.Migrations
 {
     [DbContext(typeof(EfTestContext))]
-    partial class EfTestContextModelSnapshot : ModelSnapshot
+    [Migration("20210602085251_Table2NameField")]
+    partial class Table2NameField
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
